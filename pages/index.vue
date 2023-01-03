@@ -1,21 +1,25 @@
 <template>
-    <div class="body_container">
+    <div class="mobile_container">
     <Header />
     <DiscoveryPage />
     <Reasonable />
-    <HomePageLanding />
     <Trading />
+    <QAndA />
+    <TradeNow />
+    <HomePageLanding /> 
     <Footer />
     </div>
 </template>
 
 <script>
-import Header from '@/components/header'
-import Footer from '@/components/footer'
-import HomePageLanding from '@/components/landing'
-import DiscoveryPage from '@/components/discovery'
-import Reasonable from '@/components/reasonable'
-import Trading from '@/components/trading'
+import Header from '@/components/mobile/header'
+import Footer from '@/components/mobile/footer'
+import HomePageLanding from '@/components/mobile/landing'
+import DiscoveryPage from '@/components/mobile/discovery'
+import Reasonable from '@/components/mobile/reasonable'
+import Trading from '@/components/mobile/trading'
+import QAndA from '@/components/mobile/Q&A'
+import TradeNow from '@/components/mobile/trade-now'
 
 
 export default {
@@ -25,6 +29,8 @@ export default {
         DiscoveryPage,
         Reasonable,
         Trading,
+        QAndA,
+        TradeNow,
         HomePageLanding,
     },
     name: "index"
@@ -32,14 +38,28 @@ export default {
 </script>
 
 <style lang="scss">
-.body_container {
+.desktop_container {
     max-width: 1920px;
     position: relative;
     margin: 0 auto;
     font-family: 'RoRoboto';
+    -webkit-user-select: none;
+    user-select: none;
     .container {
         max-width: 1320px;
         margin: 0 auto;
     }
 }
+.mobile_container {
+    max-width: 375px;
+    position: relative;
+    margin: 0 auto;
+    font-family: 'RoRoboto';
+    -webkit-user-select: none;
+    user-select: none;
+    .container {
+        max-width: 1320px;
+        margin: 0 auto;
+    }
+    }
 </style>

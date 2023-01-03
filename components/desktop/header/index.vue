@@ -1,10 +1,16 @@
 <template>
     <div class="header_section header">
         <div class="header__logo logo">
-            <span class="logo__content">VinEX</span>
+            <nuxt-link to="/">
+                <span class="logo__content">VinEX</span>
+            </nuxt-link>
         </div>
         <div class="header__menu menu">
-            <div class="">Menu</div>
+            <base-dropdown title-classes="btn btn-secondary" title="Regular">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+            </base-dropdown>
         </div>
         <div class="header__action action">
             <button class="action__wallet_linked">
@@ -20,7 +26,7 @@
 <style scope lang="scss">
     .header_section {
         display: flex;
-        margin-top: 10px;
+        padding: 16px 20px;
     }   
     .header {
         &__logo {
@@ -31,7 +37,7 @@
         
         .logo {
             &__content {
-                font-size: 28px;
+                font-size: 42px;
                 color: #FAAC2E;
             }
         }
@@ -44,12 +50,26 @@
             flex: 1;
         }
         .action {
+            display: flex;
+            justify-content: right;
+            
             &__wallet_linked {
                 width: 160px;
                 height: 48px;
                 background-color: #FAAC2E;
                 border-radius: 8px;
+                &:hover,
+                &:focus {
+                    animation: pulse 1s;
+                    box-shadow: 0 0 0 2em transparent;
+                }
             }
         }
+    }
+    @keyframes pulse {
+        0% { box-shadow: 0 0 0 0 adjust-hue(#ef6eae, 45deg); }
+    }
+    @-webkit-keyframes pulse {
+        0% { box-shadow: 0 0 0 0 var(--hover); }
     }
 </style>

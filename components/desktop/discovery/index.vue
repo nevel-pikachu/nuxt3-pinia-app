@@ -36,6 +36,7 @@
       margin-top: 12px;
     }
     .submid_button {
+      position: relative;
       width: 220px;
       height: 48px;
       margin-top: 12px;
@@ -44,10 +45,22 @@
       line-height: 20px;
       background: #FAAC2E;
       border-radius: 8px;
+      &:hover,
+      &:focus {
+        animation: pulse 1s;
+        box-shadow: 0 0 0 2em transparent;
+      }
     }
   }
   &__logo {
     flex: 1;
   }
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 adjust-hue(#ef6eae, 45deg); }
+}
+@-webkit-keyframes pulse {
+  0% { box-shadow: 0 0 0 0 var(--hover); }
 }
 </style>

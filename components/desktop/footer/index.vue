@@ -25,6 +25,7 @@
             </div>
         </div>
     </div>
+    <div class="end_footer">VinEX © 2022</div>
 </template>
 
 <script>
@@ -46,7 +47,6 @@ export default {
             supportList
         }
     },
-    name: "name"
 }
 </script>
 
@@ -55,6 +55,7 @@ export default {
         display: flex;
         justify-content: space-between;
         padding: 10px 280px;
+        margin-top: 64px;
         &__item {
             .title {
                 margin-bottom: 8px;
@@ -70,8 +71,16 @@ export default {
                 line-height: 20px;
                 letter-spacing: 0em;
                 color: #A0A0AB;
+                &:hover {
+                    color: #5252ff;
+                }
             }
         }
-        
+    }
+    .end_footer {
+        margin-top: 42px;
+        text-align: center;
+        padding: 10px 0;
+        border-top: 0.5px solid rgba(160,160,171, 0.2)
     }
 </style>
