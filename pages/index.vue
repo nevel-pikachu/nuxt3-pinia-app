@@ -4,6 +4,7 @@
     <DiscoveryPage />
     <Reasonable />
     <HomePageLanding />
+    <Trading />
     <Footer />
     </div>
 </template>
@@ -14,6 +15,7 @@ import Footer from '@/components/footer'
 import HomePageLanding from '@/components/landing'
 import DiscoveryPage from '@/components/discovery'
 import Reasonable from '@/components/reasonable'
+import Trading from '@/components/trading'
 
 
 export default {
@@ -22,6 +24,7 @@ export default {
         Footer,
         DiscoveryPage,
         Reasonable,
+        Trading,
         HomePageLanding,
     },
     name: "index"
