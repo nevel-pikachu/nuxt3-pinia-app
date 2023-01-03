@@ -1,0 +1,1 @@
+export { default } from "file:///D:/pikachu/nuxt3-pinia-app/node_modules/@nuxt/vite-builder/dist/runtime/client.manifest.mjs"
