@@ -61,5 +61,5 @@ export default {
         max-width: 1320px;
         margin: 0 auto;
     }
-    }
+}
 </style>
