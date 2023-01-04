@@ -1,65 +1,41 @@
 <template>
-    <div class="mobile_container">
-    <Header />
-    <DiscoveryPage />
-    <Reasonable />
-    <Trading />
-    <QAndA />
-    <TradeNow />
-    <HomePageLanding /> 
-    <Footer />
+    <div v-if="this.isMobile">
+        <Mobile />
+    </div>
+    <div v-else>
+        <Desktop />
     </div>
 </template>
 
 <script>
-import Header from '@/components/mobile/header'
-import Footer from '@/components/mobile/footer'
-import HomePageLanding from '@/components/mobile/landing'
-import DiscoveryPage from '@/components/mobile/discovery'
-import Reasonable from '@/components/mobile/reasonable'
-import Trading from '@/components/mobile/trading'
-import QAndA from '@/components/mobile/Q&A'
-import TradeNow from '@/components/mobile/trade-now'
+import Desktop from '@/components/desktop'
+import Mobile from '@/components/mobile'
 
 
 export default {
     components: {
-        Header,
-        Footer,
-        DiscoveryPage,
-        Reasonable,
-        Trading,
-        QAndA,
-        TradeNow,
-        HomePageLanding,
+        Desktop,
+        Mobile
+    },
+    mounted() {
+        if (window.innerWidth <= 768) {
+            this.isMobile = true;
+        }
+        window.addEventListener('resize', this.onResize);
+    },
+    data() {
+        return {
+            isMobile: false,
+        }
+    },
+    methods: {
+        onResize() {
+          if (window.innerWidth <= 768)
+            this.isMobile = true;
+          else
+            this.isMobile = false;
+        }
     },
     name: "index"
 }
 </script>
-
-<style lang="scss">
-.desktop_container {
-    max-width: 1920px;
-    position: relative;
-    margin: 0 auto;
-    font-family: 'RoRoboto';
-    -webkit-user-select: none;
-    user-select: none;
-    .container {
-        max-width: 1320px;
-        margin: 0 auto;
-    }
-}
-.mobile_container {
-    max-width: 375px;
-    position: relative;
-    margin: 0 auto;
-    font-family: 'RoRoboto';
-    -webkit-user-select: none;
-    user-select: none;
-    .container {
-        max-width: 1320px;
-        margin: 0 auto;
-    }
-}
-</style>

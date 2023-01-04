@@ -38,16 +38,16 @@ export default {
 </script>
 
 <style lang="scss">
-.desktop_container {
-  max-width: 1920px;
-  position: relative;
-  margin: 0 auto;
-  font-family: 'RoRoboto';
-  -webkit-user-select: none;
-  user-select: none;
-  .container {
-      max-width: 1320px;
-      margin: 0 auto;
+  .desktop_container {
+    max-width: 1920px;
+    position: relative;
+    margin: 0 auto;
+    font-family: 'RoRoboto';
+    -webkit-user-select: none;
+    user-select: none;
+    .container {
+        max-width: 1320px;
+        margin: 0 auto;
+    }
   }
-}
 </style>
