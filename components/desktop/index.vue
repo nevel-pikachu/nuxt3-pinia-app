@@ -37,7 +37,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
   .desktop_container {
     max-width: 1920px;
     position: relative;

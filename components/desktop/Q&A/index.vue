@@ -2,7 +2,9 @@
   <div class="q_a_section">
     <div class="q_a container">
       <div class="q_a__title">Hỏi & đáp</div>
-      <div class="q_a__list"></div>
+      <div class="q_a__list">
+        
+      </div>
       <div class="q_a__note note">
         <div class="note__img">
           <img src="@/assets/images/qa.svg"/>

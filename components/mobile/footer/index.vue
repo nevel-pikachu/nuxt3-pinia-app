@@ -72,9 +72,12 @@ export default {
                 font-weight: 400;
                 line-height: 20px;
                 letter-spacing: 0em;
-                color: #A0A0AB;
-                &:hover {
-                    color: #5252ff;
+                
+                a {
+                    color: #A0A0AB;
+                    &:hover {
+                        color: #5252ff;
+                    }
                 }
             }
         }

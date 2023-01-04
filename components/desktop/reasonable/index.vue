@@ -56,9 +56,9 @@ export default {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-top: 64px;
     .content_item {
       flex: 1;
-      min-width: 356px;
       margin: 0 40px;
       text-align: center;
       .item_img {

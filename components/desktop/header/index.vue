@@ -6,11 +6,38 @@
             </nuxt-link>
         </div>
         <div class="header__menu menu">
-            <base-dropdown title-classes="btn btn-secondary" title="Regular">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-            </base-dropdown>
+            <div class="dropdown menu__item">
+                <div
+                    class="dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-mdb-toggle="dropdown"
+                    aria-expanded="false"
+                >
+                    Giao dịch
+            </div>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </div>
+            <div class="dropdown menu__item">
+                <div
+                    class="dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-mdb-toggle="dropdown"
+                    aria-expanded="false"
+                >
+                   Hỗ trợ
+                </div>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </div>
         </div>
         <div class="header__action action">
             <button class="action__wallet_linked">
@@ -23,15 +50,14 @@
 <script>
 </script>
 
-<style scope lang="scss">
+<style scoped lang="scss">
     .header_section {
         display: flex;
         padding: 16px 20px;
     }   
     .header {
         &__logo {
-            flex: 1;
-            width: 122px;
+            width: 130px;
             height: 32px;
         }
         
@@ -43,7 +69,15 @@
         }
 
         &__menu {
+            display: flex;
             flex: 5;
+            padding-top: 16px;
+        }
+
+        .menu {
+            &__item {
+                margin-left: 12px;
+            }
         }
 
         &__action {

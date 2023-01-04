@@ -37,7 +37,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 .mobile_container {
   max-width: 375px;
   position: relative;
@@ -46,8 +46,8 @@ export default {
   -webkit-user-select: none;
   user-select: none;
   .container {
-      max-width: 1320px;
-      margin: 0 auto;
+    max-width: 1320px;
+    margin: 0 auto;
   }
 }
 </style>
